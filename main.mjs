@@ -7,8 +7,8 @@ import {fileURLToPath} from 'url';
 const Insta = require('instamojo-nodejs')
 const bodyParser = require('body-parser')
 
-const API_KEY = "test_6ae62b0e92aa0e9edb94f94d8c9"
-const AUTH_KEY = "test_32d7e2ce90dfa95470e1691a220"
+const API_KEY = "test_2e409090ac66fabb5ca1cd05bf0"
+const AUTH_KEY = "test_5a8698ef8c344ca26255b9631ec"
 
 Insta.setKeys(API_KEY,AUTH_KEY)
 
