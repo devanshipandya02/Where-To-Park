@@ -43,34 +43,34 @@ app.get('/payment', (req, res) => {
     res.render('payment');
 })
 
-app.post('/pay',(req,res) => {
-    var name = req.body.name
-    var email = req.body.email
-    var amount = req.body.amount
+// app.post('/pay',(req,res) => {
+//     var name = req.body.name
+//     var email = req.body.email
+//     var amount = req.body.amount
     
-    var data = new Insta.PaymentData();
+//     var data = new Insta.PaymentData();
 
-    const REDIRECT_URL = "http://localhost:3000/success";
+//     const REDIRECT_URL = "http://localhost:3000/success";
 
-    data.setRedirectUrl(REDIRECT_URL);
-    data.send_email = "True";
-    data.purpose="Test";
-    data.amount = amount;
-    data.name = name;
-    data.email = email;
+//     data.setRedirectUrl(REDIRECT_URL);
+//     data.send_email = "True";
+//     data.purpose="Test";
+//     data.amount = amount;
+//     data.name = name;
+//     data.email = email;
 
 
-    Insta.createPayment(data, function(error,response) {
-        if(error) {
-        } else {
+//     Insta.createPayment(data, function(error,response) {
+//         if(error) {
+//         } else {
             
-            console.log(response)
-            res.send("Please check your email to make payment")
+//             console.log(response)
+//             res.send("Please check your email to make payment")
             
-        }
-    });
+//         }
+//     });
 
-});
+// });
 
 app.get('/success',(req,res) => {
     res.send("Payment was successful, please check your email to download invoice pdf")
