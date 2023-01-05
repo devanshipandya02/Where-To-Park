@@ -33,16 +33,14 @@ app.get('/', (req, res) => {
     }
 );
 
-app.get('/area', (req, res) => { 
+app.get('/area', (req, res) => {
 
     res.render('area', { title: 'Where To Park?' });
     }
 );
-
 app.get('/payment', (req, res) => {
     res.render('payment');
 })
-
 app.post('/pay',(req,res) => {
     var name = req.body.name
     var email = req.body.email
