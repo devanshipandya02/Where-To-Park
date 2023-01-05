@@ -5,8 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Your Slot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <style>
+        input{
+            margin-block:1rem;
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
         <br><br>
         <h1 class="text-center">Book your slot</h1>
@@ -21,9 +29,10 @@
                 <input type="number" placeholder="Amount" name="Amount" required class="form-control">
             </div>
             <div class="form-group">
-                <button class="btn btn-danger btn-block">
+            <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Kx2p2gyDsFpfSS" async> </script>
+                <!-- <button class="btn btn-danger btn-block">
                     Generate payment link
-                </button>
+                </button> -->
             </div>
         </form>
     </div>

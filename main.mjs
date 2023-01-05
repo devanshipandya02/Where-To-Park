@@ -7,8 +7,8 @@ import {fileURLToPath} from 'url';
 const Insta = require('instamojo-nodejs')
 const bodyParser = require('body-parser')
 
-const API_KEY = "test_6ae62b0e92aa0e9edb94f94d8c9"
-const AUTH_KEY = "test_32d7e2ce90dfa95470e1691a220"
+const API_KEY = "test_2e409090ac66fabb5ca1cd05bf0"
+const AUTH_KEY = "test_5a8698ef8c344ca26255b9631ec"
 
 Insta.setKeys(API_KEY,AUTH_KEY)
 
@@ -43,34 +43,34 @@ app.get('/payment', (req, res) => {
     res.render('payment');
 })
 
-app.post('/pay',(req,res) => {
-    var name = req.body.name
-    var email = req.body.email
-    var amount = req.body.amount
+// app.post('/pay',(req,res) => {
+//     var name = req.body.name
+//     var email = req.body.email
+//     var amount = req.body.amount
     
-    var data = new Insta.PaymentData();
+//     var data = new Insta.PaymentData();
 
-    const REDIRECT_URL = "http://localhost:3000/success";
+//     const REDIRECT_URL = "http://localhost:3000/success";
 
-    data.setRedirectUrl(REDIRECT_URL);
-    data.send_email = "True";
-    data.purpose="Test";
-    data.amount = amount;
-    data.name = name;
-    data.email = email;
+//     data.setRedirectUrl(REDIRECT_URL);
+//     data.send_email = "True";
+//     data.purpose="Test";
+//     data.amount = amount;
+//     data.name = name;
+//     data.email = email;
 
 
-    Insta.createPayment(data, function(error,response) {
-        if(error) {
-        } else {
+//     Insta.createPayment(data, function(error,response) {
+//         if(error) {
+//         } else {
             
-            console.log(response)
-            res.send("Please check your email to make payment")
+//             console.log(response)
+//             res.send("Please check your email to make payment")
             
-        }
-    });
+//         }
+//     });
 
-});
+// });
 
 app.get('/success',(req,res) => {
     res.send("Payment was successful, please check your email to download invoice pdf")
