@@ -38,6 +38,7 @@ app.get('/area', (req, res) => {
     res.render('area', { title: 'Where To Park?' });
     }
 );
+
 app.get('/payment', (req, res) => {
     res.render('payment');
 })
@@ -72,8 +73,14 @@ app.post('/pay',(req,res) => {
 // });
 
 app.get('/success',(req,res) => {
-    res.send("Payment was successful, please check your email to download invoice pdf")
 
+    let alphabets = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    let random = Math.floor(Math.random() * 100) + 1; 
+
+
+    let success = "Your parking slot is " + alphabets[Math.floor(Math.random() * alphabets.length)] +"-" + random
+    res.send(success)
+    
 })
 
 app.get('style.css', (req, res) => {
