@@ -46,7 +46,8 @@ app.get('/success',(req,res) => {
         <title>Payment Success</title>
         <style> 
             body {
-                background-color: #f2f2f2;
+                background: url('https://img.freepik.com/free-vector/underground-car-parking-garage-with-vacant-places_107791-1635.jpg') no-repeat center center;
+                background-size: cover;
                 font-family: 'Roboto', sans-serif;
             }
             .container {
@@ -59,7 +60,8 @@ app.get('/success',(req,res) => {
             .success {
                 width: 400px;
                 height: 400px;
-                background-color: #fff;
+                background-color: #ffffffb5;
+                backdrop-filter: blur(1px)
                 border-radius: 10px;
                 box-shadow: 0 0 10px rgba(0,0,0,0.1);
                 padding: 20px;
@@ -67,7 +69,7 @@ app.get('/success',(req,res) => {
             }
             .success h1 {
                 font-size: 2.5rem;
-                color: #4caf50;
+                color: #691298;
             }
             .success p {
                 font-size: 1.2rem;
@@ -77,7 +79,7 @@ app.get('/success',(req,res) => {
                 display: inline-block;
                 margin-top: 20px;
                 padding: 10px 20px;
-                background-color: #4caf50;
+                background-color: #691298;
                 color: #fff;
                 text-decoration: none;
                 border-radius: 5px;

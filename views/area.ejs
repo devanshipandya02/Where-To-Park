@@ -20,15 +20,6 @@
 
 </head>
 <body>
-<script>
-      let cities = fetch('http://localhost:5000', {
-        method: 'GET',
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
-        }})
-    console.log(cities);
-</script>
 
 <div class="container">
     <!-- arrow svg -->
@@ -65,7 +56,6 @@
     "opening_time": "Mon-Sun 10:00 - 18:00",
     "iframe" :"https://maps.google.com/?daddr=22.301022,73.195144",
     "id": "m2"
-
     },
     {
     "name": "Kuber Bhavan, Kothi Vadodara",
@@ -73,14 +63,12 @@
     "opening_time": "Mon-Sun 10:00 - 18:00",
     "iframe" :"https://maps.google.com/?daddr=22.302573,73.195068",
     "id": "m3"
-
     }, {
     "name": "Shidhnath Road, Khanderao Market, Kevdabaug Vadodara",
     "type": "Free",
     "opening_time": "Mon-Sun 10:00 - 18:00",
     "iframe" :"https://maps.google.com/?daddr=22.297157,73.201201",
     "id": "m4"
-
     },
     {
     "name": "Palace Road, Race Course Vadodara",
@@ -88,6 +76,20 @@
     "opening_time": "Mon-Sun 10:00 - 18:00",
     "iframe" :"https://maps.google.com/?daddr=22.297564,73.202299",
     "id": "m5"
+    },
+    {
+    "name": "16, Akota Rd, Purushottam Nagar, Haripura, Alkapuri Vadodara",
+    "type": "Free",
+    "opening_time": "Mon-Sun 10:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=22.306601,73.179713",
+    "id": "m6"
+    },
+    {
+    "name": "Manjalpur Road, Lalbaug, Manjalpur Vadodara",
+    "type": "Free",
+    "opening_time": "Mon-Sun 10:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=22.280491,73.196917",
+    "id": "m7"
     }
     ],
 
@@ -97,30 +99,35 @@
     "name": "Atwagate, Chowpatty Surat",
     "type": "Free",
     "opening_time": "Mon-Sun 07:00 - 23:00",
-    "iframe" :"https://maps.google.com/?daddr=21.18381,72.809035"
+    "iframe" :"https://maps.google.com/?daddr=21.18381,72.809035",
+    "id": "m1"
     },
     {
     "name": "R.k Desai Marg, Atwalines Surat",
     "type": "Free",
     "opening_time": "Mon-Sun 07:00 - 18:00",
-    "iframe" :"https://maps.google.com/?daddr=21.182995,72.808905"
+    "iframe" :"https://maps.google.com/?daddr=21.182995,72.808905",
+    "id": "m2"
     },
     {
     "name": "Navdi Bandar Road, Nanpura Surat",
     "type": "Free",
     "opening_time": "Mon-Sun 10:00 - 18:00",
-    "iframe" :"https://maps.google.com/?daddr=21.188299,72.811392"
+    "iframe" :"https://maps.google.com/?daddr=21.188299,72.811392",
+    "id": "m3"
     }, {
     "name": "Lal Bunglow, Atwalines Surat",
     "type": "Free",
     "opening_time": "Mon-Sun 10:00 - 22:00",
-    "iframe" :"https://maps.google.com/?daddr=21.182488,72.804822"
+    "iframe" :"https://maps.google.com/?daddr=21.182488,72.804822",
+    "id": "m4"
     },
     {
     "name": "Near Gas Circle, Adajan Surat",
     "type": "Flat Rate ₹20.00",
     "opening_time": "Mon-Sun 09:00 - 23:00",
-    "iframe" :"https://maps.google.com/?daddr=21.193607,72.801529"
+    "iframe" :"https://maps.google.com/?daddr=21.193607,72.801529",
+    "id": "m5"
     }
     ],
 
@@ -130,52 +137,363 @@
     "name": "Pancha Pakhadi City Civil Court, Lal Darwaja Ahmedabad",
     "type": "Free",
     "opening_time": "Mon-Sun 08:30 - 18:30",
-    "iframe" :"https://maps.google.com/?daddr=23.023622,72.580102"
+    "iframe" :"https://maps.google.com/?daddr=23.023622,72.580102",
+    "id": "m1"
     },
     {
     "name": "Hotel Surana Palace Jilla Panchayat, Lal Darwaja Ahmedabad",
     "type": "Free",
     "opening_time": "Mon-Sun 09:00 - 18:00",
-    "iframe" :"https://maps.google.com/?daddr=23.024703,72.579823"
+    "iframe" :"https://maps.google.com/?daddr=23.024703,72.579823",
+    "id": "m2"
     },
     {
     "name": "The Emperor Building Sbi Building, Lal Darwaja Ahmedabad",
     "type": "Free",
     "opening_time": "Mon-Sun 08:30 - 19:00",
-    "iframe" :"https://maps.google.com/?daddr=23.02492,72.579622"
-    }, {
+    "iframe" :"https://maps.google.com/?daddr=23.02492,72.579622",
+    "id": "m3"  
+    }, 
+    {
     "name": "Bank Of India, Bhadra Market Ahmedabad",
     "type": "Free",
     "opening_time": "Mon-Sun 09:00 - 20:00",
-    "iframe" :"https://maps.google.com/?daddr=23.023946,72.58261"
+    "iframe" :"https://maps.google.com/?daddr=23.023946,72.58261",
+    "id": "m4"
     },
     {
     "name": "Bhadra Market, Lal Darwaja Ahmedabad",
     "type": "Free",
     "opening_time": "Mon-Sun 09:00 - 20:00",
-    "iframe" :"https://maps.google.com/?daddr=23.02412,72.58261"
+    "iframe" :"https://maps.google.com/?daddr=23.02412,72.58261",
+    "id": "m5"
     },
     {
         "name" : "Mahatma Gandhi Road Bahumali Building, Lal Darwaja Ahmedabad",
         "type" : "Free",
         "opening_time" : "Mon-Sun 09:00 - 20:00",
-        "iframe" : "https://maps.google.com/?daddr=23.025457,72.58023"
+        "iframe" : "https://maps.google.com/?daddr=23.025457,72.58023",
+        "id" : "m6"
     },
     {
         "name" : "It Business Complex Amc Office, Mandvi Ni Pole, Khadia Ahmedabad",
         "type" : "Free",
         "opening_time" : "Mon-Sun 09:00 - 20:00",
-        "iframe" : "https://maps.google.com/?daddr=23.02063,72.585498"
-
+        "iframe" : "https://maps.google.com/?daddr=23.02063,72.585498",
+        "id" : "m7"
     }
-    ]
-    }
+    ],
 
+
+    "rajkot":
+    [{
+    "name": "Airports Authority of India Rajkot AirportAirport Main Rd 360006 Rajkot",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=22.308265,70.782142",
+    "id": "m1"
+    },
+    {
+    "name": "Rajkot Municipal Corporation, Rajkot",
+    "type": "Free",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=22.3039,70.8022",
+    "id": "m2"
+    }
+    ],
+
+    "bengaluru":
+    [{
+    "name": "Kempegowda International Airport, Bengaluru",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=13.1979,77.7063",
+    "id": "m1"
+    },
+    {
+    "name": "Bengaluru International Airport, Bengaluru",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=13.1979,77.7063",
+    "id": "m2"
+    }
+    ],
+
+    "chennai":
+    [{
+    "name": "Chennai International Airport, Chennai",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=13.1979,77.7063",
+    "id": "m1"
+    },
+    {
+    "name": "Raja Muthiah Road, Periyamet Chennai",
+    "type": "Free",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=13.083034,80.270693",
+    "id": "m2"
+    },
+    {
+    "name": "Murugappan Street Murugappan Street, Waltax Road",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=13.091444,80.275451",
+    "id": "m3"
+    },
+    {
+    "name": "City Centre Complex",
+    "type": "Free",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=13.067562,80.271796",
+    "id": "m4"
+    },
+    {
+    "name": "Alsa Mall, Montieth Road, Egmore",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=13.068841,80.257397",
+    "id": "m5"
+    }
+    ],
+
+    "kolkata":
+    [{
+    "name": "Netaji Subhash Chandra Bose International Airport, Kolkata",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=22.6547,88.4468",
+    "id": "m1"
+    },
+    {
+    "name": "Kolkata International Airport, Kolkata",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=22.6547,88.4468",
+    "id": "m2"
+    },
+    {
+    "name": "Kolkata Airport, Kolkata",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=22.6547,88.4468",
+    "id": "m3"
+    },
+    {
+    "name": "Kolkata Airport, Kolkata",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=22.6547,88.4468",
+    "id": "m4"
+    },
+    {
+    "name": "Kolkata Airport, Kolkata",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=22.6547,88.4468",
+    "id": "m5"
+    }
+],
+
+
+    "mumbai":
+    [{
+    "name": "Chhatrapati Shivaji International Airport, Mumbai",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=19.0896,72.8650",
+    "id": "m1"
+    },
+    {
+    "name": "Mumbai International Airport, Mumbai",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=19.0896,72.8650",
+    "id": "m2"
+    },
+    {
+    "name": "Mumbai Airport, Mumbai",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=19.0896,72.8650",
+    "id": "m3"
+    },
+    {
+    "name": "Mumbai Airport, Mumbai",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=19.0896,72.8650",
+    "id": "m4"
+    },
+    {
+    "name": "Mumbai Airport, Mumbai",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=19.0896,72.8650",
+    "id": "m5"
+    }
+    ],
+
+    "delhi":
+    [{
+    "name": "Indira Gandhi International Airport, Delhi",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+    "id": "m1"
+    },
+    {
+    "name": "New Delhi International Airport, Delhi",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+    "id": "m2"
+    },
+    {
+    "name": "New Delhi Airport, Delhi",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+    "id": "m3"
+    },
+    {
+    "name": "New Delhi Airport, Delhi",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+    "id": "m4"
+    },
+    {
+    "name": "New Delhi Airport, Delhi",
+    "type": "Paid",
+    "opening_time": "Mon-Sun 09:00 - 18:00",
+    "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+    "id": "m5"
+    }
+    ],
+
+    "jaipur":
+    [{
+        "name": "Indira Gandhi International Airport, Delhi",
+        "type": "Paid",
+        "opening_time": "Mon-Sun 09:00 - 18:00",
+        "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+        "id": "m1"
+        },
+        {
+        "name": "New Delhi International Airport, Delhi",
+        "type": "Paid",
+        "opening_time": "Mon-Sun 09:00 - 18:00",
+        "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+        "id": "m2"
+        },
+        {
+        "name": "New Delhi Airport, Delhi",
+        "type": "Paid",
+        "opening_time": "Mon-Sun 09:00 - 18:00",
+        "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+        "id": "m3"
+        },
+        {
+        "name": "New Delhi Airport, Delhi",
+        "type": "Paid",
+        "opening_time": "Mon-Sun 09:00 - 18:00",
+        "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+        "id": "m4"
+        },
+        {
+        "name": "New Delhi Airport, Delhi",
+        "type": "Paid",
+        "opening_time": "Mon-Sun 09:00 - 18:00",
+        "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+        "id": "m5"
+        }
+        ],
+
+        "indore": 
+        [{
+            "name": "Indira Gandhi International Airport, Delhi",
+            "type": "Paid",
+            "opening_time": "Mon-Sun 09:00 - 18:00",
+            "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+            "id": "m1"
+            },
+            {
+            "name": "New Delhi International Airport, Delhi",
+            "type": "Paid",
+            "opening_time": "Mon-Sun 09:00 - 18:00",
+            "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+            "id": "m2"
+            },
+            {
+            "name": "New Delhi Airport, Delhi",
+            "type": "Paid",
+            "opening_time": "Mon-Sun 09:00 - 18:00",
+            "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+            "id": "m3"
+            },
+            {
+            "name": "New Delhi Airport, Delhi",
+            "type": "Paid",
+            "opening_time": "Mon-Sun 09:00 - 18:00",
+            "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+            "id": "m4"
+            },
+            {
+            "name": "New Delhi Airport, Delhi",
+            "type": "Paid",
+            "opening_time": "Mon-Sun 09:00 - 18:00",
+            "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+            "id": "m5"
+            }
+            ],
+
+
+            "Hyderbad" : 
+            [{
+                "name": "Indira Gandhi International Airport, Delhi",
+                "type": "Paid",
+                "opening_time": "Mon-Sun 09:00 - 18:00",
+                "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+                "id": "m1"
+                },
+                {
+                "name": "New Delhi International Airport, Delhi",
+                "type": "Paid",
+                "opening_time": "Mon-Sun 09:00 - 18:00",
+                "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+                "id": "m2"
+                },
+                {
+                "name": "New Delhi Airport, Delhi",
+                "type": "Paid",
+                "opening_time": "Mon-Sun 09:00 - 18:00",
+                "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+                "id": "m3"
+                },
+                {
+                "name": "New Delhi Airport, Delhi",
+                "type": "Paid",
+                "opening_time": "Mon-Sun 09:00 - 18:00",
+                "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+                "id": "m4"
+                },
+                {
+                "name": "New Delhi Airport, Delhi",
+                "type": "Paid",
+                "opening_time": "Mon-Sun 09:00 - 18:00",
+                "iframe" :"https://maps.google.com/?daddr=28.5665,77.1031",
+                "id": "m5"
+                }
+                ]
+                
+    }
       
   
+
     
 
-    // console.log(areas);
+    console.log(areas);
    
 
     let maps = [{
