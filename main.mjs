@@ -6,10 +6,6 @@ import path from 'path';
 import {fileURLToPath} from 'url';
 const bodyParser = require('body-parser')
 
-Insta.setKeys(API_KEY,AUTH_KEY)
-
-Insta.isSandboxMode(true);
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -35,19 +31,76 @@ app.get('/area', (req, res) => {
     }
 );
 
-app.get('/payment', (req, res) => {
-    res.render('payment');
-})
-
 
 
 app.get('/success',(req,res) => {
 
     let alphabets = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
     let random = Math.floor(Math.random() * 100) + 1; 
+    alphabets = alphabets[Math.floor(Math.random() * alphabets.length)];
 
 
-    let success = "Your parking slot is " + alphabets[Math.floor(Math.random() * alphabets.length)] +"-" + random;
+
+    let success =  `<html>
+    <head>
+        <title>Payment Success</title>
+        <style> 
+            body {
+                background-color: #f2f2f2;
+                font-family: 'Roboto', sans-serif;
+            }
+            .container {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .success {
+                width: 400px;
+                height: 400px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                padding: 20px;
+                text-align: center;
+            }
+            .success h1 {
+                font-size: 2.5rem;
+                color: #4caf50;
+            }
+            .success p {
+                font-size: 1.2rem;
+                color: #333;
+            }
+            .success a {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 10px 20px;
+                background-color: #4caf50;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: 0.3s;
+            }
+            .success a:hover {
+                background-color: #43a047;
+            }
+        </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="success">
+                    <h1>Payment Success</h1>
+                    <p>Thank you for your payment</p>
+                    <p>Parking ID: ${alphabets}${random}</p>
+                    <a href="/">Go Back</a>
+                    </div>
+                    </div>
+                    </body>
+                    </html>
+                    `
+
     res.send(success)
     
 })
